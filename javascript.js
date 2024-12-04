@@ -42,7 +42,6 @@ function Board() {
 
   function checkDraw() {
     if (occupiedCell == 9) {
-      debugger;
       console.log("Draw!");
       return true;
     } else {
@@ -115,7 +114,6 @@ function Board() {
           return true;
         }
       }
-      gi;
     }
     return false;
   }
