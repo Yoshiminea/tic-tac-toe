@@ -1,0 +1,117 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  ---purple: rgb(65, 0, 65);
+  font-family: "Roboto";
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+body .container {
+  height: 70vh;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: stretch;
+  box-shadow: 0px 15px 25px -4px rgba(150, 150, 150, 0.24);
+}
+
+.upper-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.result {
+  color: var(---purple);
+}
+.tic {
+  flex: 7;
+  background-color: var(---purple);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tic__container {
+  display: grid;
+  /* width: 200px;
+  height: 200px; */
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2px;
+}
+.lower-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cell {
+  height: 50px;
+  width: 50px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: opacity 1s ease 0s;
+}
+
+.cell .cellChosen {
+  opacity: 1;
+}
+
+.cell:hover {
+  opacity: 0.5;
+}
+.cellChosen:hover {
+  opacity: 1;
+}
+
+.circle {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: var(---purple);
+}
+.circle:hover {
+  opacity: 1;
+}
+
+.cross {
+  --c: var(---purple);
+
+  height: 30px;
+  aspect-ratio: 1;
+  box-shadow: 0 0 0 35px inset var(--c);
+  border-image: conic-gradient(var(--c) 0 0) 50% / calc(50% - 15px);
+
+  rotate: 45deg;
+}
+.cross:hover {
+  opacity: 1;
+}
+.restart {
+  background-color: var(---purple);
+
+  /* border: 1px solid #18ab29; */
+  border-style: none;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+
+  padding: 5px 14px;
+  text-decoration: none;
+  transition: opacity 1s ease 0s;
+}
+.restart:hover {
+  opacity: 0.7;
+}
